@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/osint-dashboard.iml" filepath="$PROJECT_DIR$/.idea/osint-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/web_page_miner.iml" filepath="$PROJECT_DIR$/.idea/web_page_miner.iml" />
     </modules>
   </component>
 </project>

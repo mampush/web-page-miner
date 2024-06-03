@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Analysis</title>
+    <link rel="stylesheet" type="text/css" href="static/tools.css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5642728784073260"
+     crossorigin="anonymous"></script>
+    <style>
+        .tool-info { cursor: pointer; }
+        .tool-info:not(:last-child) { margin-bottom: 10px; }
+        .tool-details { display: none; padding-left: 20px; }
+        .expanded .tool-details { display: block; }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div id="dash-board">
+        <div id="info-container">
+            <h2>{{user_url}}</h2>
+            <h2><img style="width: 32px; height: auto" src="{{ favicon }}" /></h2>
+            <h2>{{title}}</h2>
+            <h2>{{ip_info}}</h2>
+        </div>
+
+        <div id="tools-container">
+            <button onclick="toggleAllSections()">Expand/Collapse All</button>
+            <div id="tool-column">
+                <!-- Example for one tool-info section -->
+                <div class="ip-information tool-info" onclick="toggleSection(this)">
+                    <b style="font-size: 20px">IP/Server Information:</b>
+                    <span class="question-mark">&#63;</span>
+                    <div class="tool-details">
+                        Details about the organization, location, IP address, and hosting infrastructure of a website.
+                    </div>
+                </div>
+                <!-- Repeat for other tool-info sections -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(element) {
+            element.classList.toggle('expanded');
+        }
+
+        function toggleAllSections() {
+            const sections = document.querySelectorAll('.tool-info');
+            sections.forEach(section => {
+                section.classList.toggle('expanded');
+            });
+        }
+    </script>
+    <script src="static/script.js"></script>
+</body>
+</html>

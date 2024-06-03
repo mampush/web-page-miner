@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #004165;
+  --secondary-color: #F9F9F9;
+  --border-color: #F4FAFF;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-family-header: 'Ariel Bold', sans-serif;
+}
+
+#title {
+  font-size: 3.125rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-style: italic;
+  font-family: var(--font-family-header);
+}
+
+#dropdown-container {
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 1.5%;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  margin: 1% auto 1.5%;
+  width: 97%;
+}

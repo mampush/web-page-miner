@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="static/header.css" />
+<div id="navbar">
+  <a href="{{ url_for('index') }}" id="title">Web Page Miner</a>
+  <a href="{{ url_for('about') }}">About</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function toggleMenu() {
+  var x = document.getElementById("navbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>

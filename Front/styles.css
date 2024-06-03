@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #004165;
+  --secondary-color: #F9F9F9;
+  --background-gradient-start: #F5F5F5;
+  --background-gradient-end: #E8E8E8;
+  --text-color: #333;
+  --border-color: #ccc;
+  --shadow-color: rgba(0,0,0,0.1);
+  --font-family-default: 'Roboto', sans-serif;
+  --font-family-alt: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
+  font-family: var(--font-family-default);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+button, input[type="text"] {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  outline: none;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.input-container, .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 20px;
+}
+
+.inputs, form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  height: 60vh;
+}
+
+form {
+  background-color: #ffffff;
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  width: 1000px;
+  margin: 0 10px;
+}
+
+#webForm {
+  width: 50%; /* Adjust as needed */
+}
+
+.credits {
+  position: absolute;
+  bottom: 0px;
+}
+
+html {
+  font-family: var(--font-family-alt);
+}
+
+h2 {
+  color: var(--primary-color);
+  font-family: var(--font-family-default);
+  margin-bottom: -5%;
+}
+
+.loading-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quote-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.quote {
+  font-style: italic;
+}
